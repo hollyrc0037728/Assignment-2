@@ -19,6 +19,7 @@ namespace Assignment_2
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            //This is the coding for 2 resistors in series
             double R1, R2, TotalResistance;
             //Here a try-catch is set up for the imput from the textboxes 
             try
@@ -27,7 +28,7 @@ namespace Assignment_2
             }
             catch
             {
-                MessageBox.Show("R1 has not been inputted properly");
+                MessageBox.Show("Resistance has not been inputted properly");
                 R1 = 0.0;
             }
 
@@ -37,13 +38,85 @@ namespace Assignment_2
             }
             catch
             {
-                MessageBox.Show("R2 has not been inputted properly");
+                MessageBox.Show("Resistance has not been inputted properly");
                 R2 = 0.0;
             }
             //calculate the values for the total resistance
             TotalResistance = R1 + R2;
-            //Shoing the answer
+            //output the answer
             label11.Text = "Rt =" + TotalResistance;
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            //this is the coding for 2 resistors in parallel
+            double R1,R2, TotalResistance;
+            //here is the try-catch for the input from the textboxes
+            try
+            {
+                R1 = double.Parse(textBox3.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Resistance has not been inputted properly");
+                R1 = 0.0;
+            }
+            try
+            {
+                R2 = double.Parse(textBox4.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Resistance has not been inputted properly");
+                R2 = 0.0;
+            }
+            //calculate the values for total resistance
+            TotalResistance = 1 / ((1 / R1) + (1 / R2));
+            //Output of the answer
+            label13.Text = "Rt = " + TotalResistance;
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            //This is the coding for 3 resistors in series
+            double R1, R2, R3, TotalResistance;
+            //Here is the try-catch for the input from the textboxes
+            try
+            {
+                R1 = double.Parse(textBox5.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Resistance has not been inputted properly");
+                R1 = 0.0;
+            }
+            try
+            {
+                R2 = double.Parse(textBox6.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Resistance has not ben inputted properly");
+                R2 = 0.0;
+            }
+            try
+            {
+                R3 = double.Parse(textBox5.Text);
+            }
+            catch
+            {
+                MessageBox.Show("resistance has not been inputted properly");
+                R3 = 0.0;
+            }
+            //calculate the total resistance
+            TotalResistance = R1 + R2 + R3;
+            //displaying the answer
+            label12.Text = "Rt = " + TotalResistance;
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            //This is the coding for 3 resisitors in parallel
         }
     }
 }

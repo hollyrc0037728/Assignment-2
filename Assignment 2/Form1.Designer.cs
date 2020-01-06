@@ -63,6 +63,8 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -157,6 +159,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label13);
             this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.textBox4);
             this.tabPage2.Controls.Add(this.textBox3);
@@ -179,6 +182,7 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "Calculate Total Resistance";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // textBox4
             // 
@@ -224,6 +228,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.label6);
@@ -247,6 +252,7 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "Calculate Total Resistance";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // label7
             // 
@@ -331,6 +337,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Calculate Total Resistance";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // label10
             // 
@@ -399,6 +406,24 @@
             this.label11.TabIndex = 6;
             this.label11.Text = "Rt = ";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(309, 360);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(30, 13);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Rt = ";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(520, 301);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(30, 13);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Rt = ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,6 +485,8 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }
 
