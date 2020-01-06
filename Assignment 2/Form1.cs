@@ -101,7 +101,7 @@ namespace Assignment_2
             }
             try
             {
-                R3 = double.Parse(textBox5.Text);
+                R3 = double.Parse(textBox7.Text);
             }
             catch
             {
@@ -117,6 +117,39 @@ namespace Assignment_2
         private void Button2_Click(object sender, EventArgs e)
         {
             //This is the coding for 3 resisitors in parallel
+            double R1, R2, R3, TotalResistance;
+            //Here is the try-catch for the input from the textboxes
+             try
+            {
+                R1 = double.Parse(textBox8.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Resistance has not been inputted properly");
+                R1 = 0.0;
+            }
+            try
+            {
+                R2 = double.Parse(textBox9.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Resistance has not ben inputted properly");
+                R2 = 0.0;
+            }
+            try
+            {
+                R3 = double.Parse(textBox10.Text);
+            }
+            catch
+            {
+                MessageBox.Show("resistance has not been inputted properly");
+                R3 = 0.0;
+            }
+            //Here is the calculation for the total resistance
+            TotalResistance = 1 / ((1 / R1) + (1 / R2) + (1 / R3));
+            //Displaying the answer
+            label14.Text = "Rt = " + TotalResistance;
         }
     }
 }
